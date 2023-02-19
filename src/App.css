@@ -1,38 +1,28 @@
 .App {
-  text-align: center;
+  box-sizing: border-box;
+  background-image: url(img/slika.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tekst {
+margin-top: 100px;
+background-color: rgba(0, 0, 0, .3);
+padding-top: 10 px;
+margin-right: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tekst input{
+  margin-top: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tekst button{
+ background-color: rgb(6, 159, 19);
+ border-radius: 5px;
+ border: none;
+ padding: 5px 10px;
 }

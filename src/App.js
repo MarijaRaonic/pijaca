@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import './App.css';
+import Lista from './components/Lista';
+
+
+const App = () => {
+
+const [namirnice, setNamirnice] = useState(['banane', 'gauda','lesnik']);
+const [namirnica, setNamirnica] = useState('');
+
+  const dodajNamirnicu = () => {
+    setNamirnice(previous => {
+      return [...previous, namirnica]
+    })
+  };
+
+
+  // if (namirnica !== '') {
+  //   setNamirnice(previous => {
+  //     return [...previous, namirnica]
+  //   })
+  // setNamirnica('');
+  // setNamirnica(focus);
+  // };  
+
+  return (  
+  
+  <div className="App">
+
+<div class="container text-center">
+  <div class="row">
+    
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col tekst">
+      
+    <input type='text' name='namirnica' value={namirnica} onChange={(event) => {setNamirnica(event.target.value)}}/>
+    <br/>
+    <br/>
+      <button onClick={dodajNamirnicu}>Dodaj</button>
+      <br/>
+      <br/>
+      
+      <Lista namirnice={namirnice} setNamirnice={setNamirnice}/>
+  </div>
+</div> 
+</div> 
+</div>  )
+
+};
+  
+
 
 export default App;
